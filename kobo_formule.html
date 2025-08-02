@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASPECTS ÉPIDÉMIOLOGIQUES, DIAGNOSTIQUES, THÉRAPEUTIQUES ET EVOLUTIFS DES LUXATIONS DE L'ÉPAULE AU CNHU-HKM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .group {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .hint {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+        }
+        .checkbox-group, .radio-group {
+            margin-bottom: 10px;
+        }
+        .checkbox-option, .radio-option {
+            margin-bottom: 5px;
+        }
+        .required:after {
+            content: " *";
+            color: red;
+        }
+        .note {
+            background-color: #f0f7fd;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 15px;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .score-display {
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .red-text {
+            color: red;
+            font-weight: bold;
+        }
+        .blue-text {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form id="shoulderSurvey">
+        <div class="group">
+            <h1><span style="color:red">ASPECTS ÉPIDÉMIOLOGIQUES, DIAGNOSTIQUES, THÉRAPEUTIQUES ET EVOLUTIFS DES LUXATIONS DE L'ÉPAULE AU CNHU-HKM</span></h1>
+        </div>
+
+        <!-- Section A: Patient Identity -->
+        <div class="group" id="group_ka11b09">
+            <h2>A- IDENTITÉ DU PATIENT</h2>
+            
+            <div class="question">
+                <label for="Num_ro_de_dossier">Numéro de dossier</label>
+                <input type="number" id="Num_ro_de_dossier" name="Num_ro_de_dossier">
+            </div>
+            
+            <div class="question">
+                <label for="Date_d_admission" class="required">Date d'admission</label>
+                <input type="date" id="Date_d_admission" name="Date_d_admission" required>
+            </div>
+            
+            <div class="question">
+                <label for="Nom_et_pr_noms" class="required">Nom et prénoms</label>
+                <input type="text" id="Nom_et_pr_noms" name="Nom_et_pr_noms" required>
+            </div>
+            
+            <div class="question">
+                <label for="_ge_ans" class="required">Âge (ans)</label>
+                <input type="number" id="_ge_ans" name="_ge_ans" required>
+            </div>
+            
+            <div class="question">
+                <label for="Sexe" class="required">Sexe</label>
+                <select id="Sexe" name="Sexe" required>
+                    <option value=""></option>
+                    <option value="masculin">Masculin</option>
+                    <option value="f_minin">Féminin</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <label for="Contacts" class="required">Contacts</label>
+                <input type="number" id="Contacts" name="Contacts" required>
+            </div>
+            
+            <div class="question">
+                <label for="Personne_contacter_en_cas_d_">Personne à contacter en cas d'urgence</label>
+                <input type="text" id="Personne_contacter_en_cas_d_" name="Personne_contacter_en_cas_d_">
+            </div>
+            
+            <div class="question">
+                <label for="Adresse" class="required">Adresse</label>
+                <select id="Adresse" name="Adresse" required>
+                    <option value=""></option>
+                    <option value="milieu_rural">Milieu rural</option>
+                    <option value="milieu_urbain">Milieu urbain</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <label for="Profession" class="required">Profession</label>
+                <select id="Profession" name="Profession" required>
+                    <option value=""></option>
+                    <option value="fonctionnaire">Fonctionnaire</option>
+                    <option value="commer_ant_artisan">Commerçant/Artisan</option>
+                    <option value="_l_ve_tudiant">Élève/Étudiant</option>
+                    <option value="ouvrier">Ouvrier</option>
+                    <option value="conducteur_de_taxi_moto">Conducteur de Taxi Moto</option>
+                    <option value="m_nag_re">Ménagère</option>
+                    <option value="non_pr_cis_e">Non précisée</option>
+                    <option value="autre___pr_ciser">Autre</option>
+                </select>
+            </div>
+            
+            <div class="question" id="Pr_ciser_001_container" style="display:none;">
+                <label for="Pr_ciser_001" class="required">Préciser</label>
+                <input type="text" id="Pr_ciser_001" name="Pr_ciser_001">
+            </div>
+            
+            <div class="question">
+                <label for="Situation_matrimoniale" class="required">Situation matrimoniale</label>
+                <select id="Situation_matrimoniale" name="Situation_matrimoniale" required>
+                    <option value=""></option>
+                    <option value="c_libataire_veuf_ve_">Célibataire</option>
+                    <option value="mari_e_">Marié(e)</option>
+                    <option value="divorc_e_">Divorcé(e)</option>
+                    <option value="veuf_ve">Veuf(ve)</option>
+                    <option value="non_pr_cis_e">Non précisée</option>
+                    <option value="autres">Autres</option>
+                </select>
+            </div>
+            
+            <div class="question" id="Pr_ciser_002_container" style="display:none;">
+                <label for="Pr_ciser_002" class="required">Préciser</label>
+                <input type="text" id="Pr_ciser_002" name="Pr_ciser_002">
+            </div>
+            
+            <div class="question">
+                <label for="Couverture_m_dicale" class="required">Couverture médicale</label>
+                <select id="Couverture_m_dicale" name="Couverture_m_dicale" required>
+                    <option value=""></option>
+                    <option value="pec_de_l_tat">PEC de l'État</option>
+                    <option value="assurance">Assurance</option>
+                    <option value="aucun">Aucun</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <label for="Pratique_sportive" class="required">Pratique sportive</label>
+                <select id="Pratique_sportive" name="Pratique_sportive" required>
+                    <option value=""></option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+            </div>
+            
+            <div class="question" id="Si_Oui_pr_cisez_001_container" style="display:none;">
+                <label for="Si_Oui_pr_cisez_001" class="required">Si Oui, précisez</label>
+                <input type="text" id="Si_Oui_pr_cisez_001" name="Si_Oui_pr_cisez_001">
+            </div>
+        </div>
+
+        <!-- Section B: Antecedents -->
+        <div class="group" id="group_dr66j16">
+            <h2>B- ANTÉCÉDENTS</h2>
+            
+            <div class="group" id="group_bt7gl12">
+                <h3>Antécédents chirurgicaux</h3>
+                
+                <div class="question">
+                    <label for="Ant_c_dent_de_luxation_de_l_pa" class="required">Antécédent de luxation de l'épaule</label>
+                    <select id="Ant_c_dent_de_luxation_de_l_pa" name="Ant_c_dent_de_luxation_de_l_pa" required>
+                        <option value=""></option>
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select>
+                </div>
+                
+                <div class="question" id="Si_oui_pr_cisez_container" style="display:none;">
+                    <label for="Si_oui_pr_cisez" class="required">Préciser</label>
+                    <select id="Si_oui_pr_cisez" name="Si_oui_pr_cisez" required>
+                        <option value=""></option>
+                        <option value="epaule_droite">Epaule droite</option>
+                        <option value="epaule_gauche">Epaule gauche</option>
+                    </select>
+                </div>
+                
+                <div class="question" id="Nombre_de_fois_container" style="display:none;">
+                    <label for="Nombre_de_fois" class="required">Nombre de fois</label>
+                    <input type="number" id="Nombre_de_fois" name="Nombre_de_fois">
+                </div>
+                
+                <div class="question">
+                    <label for="Intervention_chirurgicale_sur_">Intervention chirurgicale sur l'épaule</label>
+                    <select id="Intervention_chirurgicale_sur_" name="Intervention_chirurgicale_sur_">
+                        <option value=""></option>
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select>
+                </div>
+                
+                <div class="question" id="Si_oui_pr_cisez_Motif_container" style="display:none;">
+                    <label for="Si_oui_pr_cisez_Motif" class="required">Précisez : Motif</label>
+                    <input type="text" id="Si_oui_pr_cisez_Motif" name="Si_oui_pr_cisez_Motif">
+                </div>
+                
+                <div class="question" id="Nombre_de_fois_2_container" style="display:none;">
+                    <label for="Nombre_de_fois_2" class="required">Nombre de fois</label>
+                    <input type="number" id="Nombre_de_fois_2" name="Nombre_de_fois_2">
+                </div>
+            </div>
+            
+            <div class="question">
+                <label class="required">Antécédents médicaux</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-option"><input type="checkbox" id="hta" name="Ant_c_dents_m_dicaux" value="hta"> <label for="hta">HTA</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="diab_te" name="Ant_c_dents_m_dicaux" value="diab_te"> <label for="diab_te">Diabète</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="epilepsie" name="Ant_c_dents_m_dicaux" value="epilepsie"> <label for="epilepsie">Epilepsie</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="tabagisme" name="Ant_c_dents_m_dicaux" value="tabagisme"> <label for="tabagisme">Tabagisme</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="__thylisme" name="Ant_c_dents_m_dicaux" value="__thylisme"> <label for="__thylisme">Éthylisme</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="ob_sit_" name="Ant_c_dents_m_dicaux" value="ob_sit_"> <label for="ob_sit_">Obésité</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="autre___pr_ciser_med" name="Ant_c_dents_m_dicaux" value="autre___pr_ciser"> <label for="autre___pr_ciser_med">Autre (à préciser)</label></div>
+                </div>
+            </div>
+            
+            <div class="question" id="Pr_ciser_003_container" style="display:none;">
+                <label for="Pr_ciser_003" class="required">Préciser</label>
+                <input type="text" id="Pr_ciser_003" name="Pr_ciser_003">
+            </div>
+        </div>
+
+        <!-- Section C: Circumstances -->
+        <div class="group" id="group_me5gi99">
+            <h2>C- CIRCONSTANCES DE SURVENUE</h2>
+            
+            <div class="question">
+                <label for="circontance" class="required">Circonstances de survenue</label>
+                <select id="circontance" name="circontance" required>
+                    <option value=""></option>
+                    <option value="avp">AVP</option>
+                    <option value="accid_dom">Accidents domestiques</option>
+                    <option value="accid_sport">Accident de sport</option>
+                    <option value="accid_travail">Accident de travail</option>
+                    <option value="rixe">Rixe</option>
+                    <option value="chute">Chute d'arbre</option>
+                    <option value="crise">Crise convulsive</option>
+                    <option value="electri">Electrisation</option>
+                </select>
+            </div>
+            
+            <div class="question" id="AVP_v_container" style="display:none;">
+                <label for="AVP_v" class="required">AVP</label>
+                <select id="AVP_v" name="AVP_v" required>
+                    <option value=""></option>
+                    <option value="pi_ton_moto">Piéton-Moto</option>
+                    <option value="moto_obstacle">Moto-Obstacle</option>
+                    <option value="pi_ton_auto">Piéton-auto</option>
+                    <option value="auto_auto">Auto-auto</option>
+                    <option value="moto_moto">Moto-moto</option>
+                    <option value="embard_s">Embardés</option>
+                    <option value="chute___moto">Chute à moto</option>
+                    <option value="non_pr_cis">Non précisé</option>
+                    <option value="autres">Autres</option>
+                </select>
+            </div>
+            
+            <div class="question" id="Pr_ciser_004_container" style="display:none;">
+                <label for="Pr_ciser_004">Préciser</label>
+                <input type="text" id="Pr_ciser_004" name="Pr_ciser_004">
+            </div>
+            
+            <div class="question" id="Accidents_domestiques_container" style="display:none;">
+                <label for="Accidents_domestiques" class="required">Accidents domestiques</label>
+                <select id="Accidents_domestiques" name="Accidents_domestiques" required>
+                    <option value=""></option>
+                    <option value="glissade">Glissade</option>
+                    <option value="chute_du_lit_chaise">Chute du lit/chaise</option>
+                    <option value="chute_des_escaliers_tage">Chute des escaliers/étage</option>
+                    <option value="non_pr_cis_">Non précisé</option>
+                    <option value="_autres">Autres</option>
+                </select>
+            </div>
+            
+            <div class="question" id="Pr_ciser_005_container" style="display:none;">
+                <label for="Pr_ciser_005">Préciser</label>
+                <input type="text" id="Pr_ciser_005" name="Pr_ciser_005">
+            </div>
+            
+            <div class="question" id="Accident_de_sport_container" style="display:none;">
+                <label for="Accident_de_sport" class="required">Accident de sport</label>
+                <select id="Accident_de_sport" name="Accident_de_sport" required>
+                    <option value=""></option>
+                    <option value="footing">Footing</option>
+                    <option value="_karat_">Karaté</option>
+                    <option value="handball">Handball</option>
+                    <option value="patin___roulettes">Patin à roulettes</option>
+                    <option value="judo">Judo</option>
+                    <option value="volleyball">Volleyball</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="_rugby">Rugby</option>
+                    <option value="_tennis">Tennis</option>
+                    <option value="non_pr_cis">Non précisé</option>
+                    <option value="autres">Autres</option>
+                </select>
+            </div>
+            
+            <div class="question" id="Pr_ciser_006_container" style="display:none;">
+                <label for="Pr_ciser_006">Préciser</label>
+                <input type="text" id="Pr_ciser_006" name="Pr_ciser_006">
+            </div>
+            
+            <div class="question" id="Accident_de_travail_container" style="display:none;">
+                <label for="Accident_de_travail" class="required">Accident de travail</label>
+                <select id="Accident_de_travail" name="Accident_de_travail" required>
+                    <option value=""></option>
+                    <option value="chute_d_chelle">Chute d'échelle</option>
+                    <option value="_chute_d_chafaudage">Chute d'échafaudage</option>
+                    <option value="chute_glissade_au_bureau">Chute/glissade au bureau</option>
+                    <option value="non_pr_cis">Non précisé</option>
+                    <option value="_autres">Autres</option>
+                </select>
+            </div>
+            
+            <div class="question" id="Pr_ciser_007_container" style="display:none;">
+                <label for="Pr_ciser_007">Préciser</label>
+                <input type="text" id="Pr_ciser_007" name="Pr_ciser_007">
+            </div>
+        </div>
+
+        <!-- Section D: Admission -->
+        <div class="group" id="group_eh6xg28">
+            <h2>D- DELAI ET MODE D'ADMISSION</h2>
+            
+            <div class="question">
+                <label for="D_lai_d_admission_Heures" class="required">Délai d'admission (Heures)</label>
+                <select id="D_lai_d_admission_Heures" name="D_lai_d_admission_Heures" required>
+                    <option value=""></option>
+                    <option value="__06h">&lt; 06h</option>
+                    <option value="06h_12h">06h-12h</option>
+                    <option value="12h_24h">12h-24h</option>
+                    <option value="__24h">&gt; 24h</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <label for="Mode_d_admission" class="required">Mode d'admission</label>
+                <select id="Mode_d_admission" name="Mode_d_admission" required>
+                    <option value=""></option>
+                    <option value="admission_directe">Admission directe</option>
+                    <option value="r_f_rence">Référence</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <label for="Mode_de_transport" class="required">Mode de transport</label>
+                <select id="Mode_de_transport" name="Mode_de_transport" required>
+                    <option value=""></option>
+                    <option value="sapeurs_pompiers">Sapeurs-pompiers</option>
+                    <option value="ambulance">Ambulance</option>
+                    <option value="_transport_personnel">Transport personnel</option>
+                    <option value="non_pr_cis">Non précisé</option>
+                    <option value="autres">Autres</option>
+                </select>
+            </div>
+            
+            <div class="question" id="Pr_ciser_008_container" style="display:none;">
+                <label for="Pr_ciser_008">Préciser</label>
+                <input type="text" id="Pr_ciser_008" name="Pr_ciser_008">
+            </div>
+        </div>
+
+        <!-- Section E: Dislocation Type -->
+        <div class="group" id="group_kx4jf99">
+            <h2>E- TYPE DE LUXATION</h2>
+            
+            <div class="question">
+                <label for="C_t" class="required">Côté</label>
+                <select id="C_t" name="C_t" required>
+                    <option value=""></option>
+                    <option value="droit">Droit</option>
+                    <option value="gauche">Gauche</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <label for="Type" class="required">Type</label>
+                <select id="Type" name="Type" required>
+                    <option value=""></option>
+                    <option value="fracture_luxation">Fracture-Luxation</option>
+                    <option value="luxation_isol_e">Luxation isolée</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <label for="Luxation_scapulo_hum_rale" class="required">Luxation scapulo-humérale</label>
+                <select id="Luxation_scapulo_hum_rale" name="Luxation_scapulo_hum_rale" required>
+                    <option value=""></option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+            </div>
+            
+            <div class="question" id="Pr_ciser_container" style="display:none;">
+                <label for="Pr_ciser" class="required">Précision de luxation scapulo-humérale</label>
+                <select id="Pr_ciser" name="Pr_ciser" required>
+                    <option value=""></option>
+                    <option value="ant_rieure_sous__coraco_dienne">Antérieure Sous- coracoïdienne</option>
+                    <option value="ant_rieure_extra_coraco_dienne">Antérieure Extra-coracoïdienne</option>
+                    <option value="ant_rieure_intra_coraco_dienne">Antérieure Intra-coracoïdienne</option>
+                    <option value="ant_rieure_sous_claviculaire">Antérieure Sous claviculaire</option>
+                    <option value="post_rieure_sous_pineuse">Postérieure Sous-épineuse</option>
+                    <option value="post_rieure_sous_acromiale">Postérieure Sous-acromiale</option>
+                    <option value="inf_rieure">Inférieure</option>
+                    <option value="sup_rieure">Supérieure</option>
+                </select>
+            </div>
+            
+            <div class="question" id="Autres_luxations_container" style="display:none;">
+                <label for="Autres_luxations" class="required">Autres luxations (Disjonction)</label>
+                <div class="hint">veuillez reseigner si luxation scapulo-humérale est <strong>non</strong></div>
+                <select id="Autres_luxations" name="Autres_luxations" required>
+                    <option value=""></option>
+                    <option value="disjonction_acromio_claviculaire">Disjonction acromio-claviculaire</option>
+                    <option value="disjonction_sterno_claviculaire">Disjonction sterno-claviculaire</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Section F: History -->
+        <div class="group" id="group_zr52i34">
+            <h2>F- HISTORIQUE</h2>
+            
+            <div class="question">
+                <label for="Historique" class="required">Historique</label>
+                <select id="Historique" name="Historique" required>
+                    <option value=""></option>
+                    <option value="r_cente">Récente</option>
+                    <option value="ancienne">Ancienne</option>
+                    <option value="r_cidivante">Récidivante</option>
+                </select>
+            </div>
+            
+            <div class="question" id="Nombre_d_pisode_container" style="display:none;">
+                <label for="Nombre_d_pisode" class="required">Nombre d'épisode</label>
+                <input type="number" id="Nombre_d_pisode" name="Nombre_d_pisode">
+            </div>
+            
+            <div class="question" id="D_lai_1er_pisode_mois_container" style="display:none;">
+                <label for="D_lai_1er_pisode_mois" class="required">Délai 1er épisode (mois)</label>
+                <input type="text" id="D_lai_1er_pisode_mois" name="D_lai_1er_pisode_mois">
+            </div>
+        </div>
+
+        <!-- Section G: Clinical Exam -->
+        <div class="group" id="group_vq6bt15">
+            <h2>G- EXAMEN CLINIQUE</h2>
+            
+            <div class="question">
+                <label class="required">Signes fonctionnels</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-option"><input type="checkbox" id="douleur_de_l_paule" name="Signes_fonctionnels" value="douleur_de_l_paule"> <label for="douleur_de_l_paule">Douleur de l'épaule</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="impotence_fonctionnelle" name="Signes_fonctionnels" value="impotence_fonctionnelle"> <label for="impotence_fonctionnelle">Impotence fonctionnelle</label></div>
+                </div>
+            </div>
+            
+            <div class="question" id="Impotence_fonctionnelle_pr_cis_container" style="display:none;">
+                <label for="Impotence_fonctionnelle_pr_cis" class="required">Impotence fonctionnelle précision</label>
+                <select id="Impotence_fonctionnelle_pr_cis" name="Impotence_fonctionnelle_pr_cis" required>
+                    <option value=""></option>
+                    <option value="absolue">Absolue</option>
+                    <option value="relative">Relative</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <label class="required">Signes à l'inspection</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-option"><input type="checkbox" id="signe_de_l_paulette" name="Signes_l_inspection" value="signe_de_l_paulette"> <label for="signe_de_l_paulette">Signe de l'épaulette</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="attitude_de_dessault" name="Signes_l_inspection" value="attitude_de_dessault"> <label for="attitude_de_dessault">Attitude de DESSAULT</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="coup_de_hache_externe" name="Signes_l_inspection" value="coup_de_hache_externe"> <label for="coup_de_hache_externe">Coup de hache externe</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="tum_faction_de_l_paule" name="Signes_l_inspection" value="tum_faction_de_l_paule"> <label for="tum_faction_de_l_paule">Tuméfaction de l'épaule</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="amyotrophie_du_delto_de" name="Signes_l_inspection" value="amyotrophie_du_delto_de"> <label for="amyotrophie_du_delto_de">Amyotrophie du deltoïde</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="comblement_du_sillon_delto_pectoral" name="Signes_l_inspection" value="comblement_du_sillon_delto_pectoral"> <label for="comblement_du_sillon_delto_pectoral">Comblement du sillon delto-pectoral</label></div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label class="required">Signes à la palpation</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-option"><input type="checkbox" id="vacuit__de_la_gl_ne" name="Signes_la_palpation" value="vacuit__de_la_gl_ne"> <label for="vacuit__de_la_gl_ne">Vacuité de la glène</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="abduction_irr_ductible" name="Signes_la_palpation" value="abduction_irr_ductible"> <label for="abduction_irr_ductible">Abduction irréductible</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="adduction_irr_ductible" name="Signes_la_palpation" value="adduction_irr_ductible"> <label for="adduction_irr_ductible">Adduction irréductible</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="douleur_exquise_de_l_paule" name="Signes_la_palpation" value="douleur_exquise_de_l_paule"> <label for="douleur_exquise_de_l_paule">Douleur exquise de l'épaule</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="palpation_de_la_t_te_hum_rale_en_avant" name="Signes_la_palpation" value="palpation_de_la_t_te_hum_rale_en_avant"> <label for="palpation_de_la_t_te_hum_rale_en_avant">Palpation de la tête humérale en avant</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="palpation_de_la_t_te_hum_rale_en_arri_re" name="Signes_la_palpation" value="palpation_de_la_t_te_hum_rale_en_arri_re"> <label for="palpation_de_la_t_te_hum_rale_en_arri_re">Palpation de la tête humérale en arrière</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="sensibilit__du_moignon_de_l_paule" name="Signes_la_palpation" value="sensibilit__du_moignon_de_l_paule"> <label for="sensibilit__du_moignon_de_l_paule">Sensibilité du moignon de l'épaule</label></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section H: Complementary Exams -->
+        <div class="group" id="group_yy4dm18">
+            <h2>H- EXAMENS COMPLÉMENTAIRES</h2>
+            
+            <div class="question">
+                <label class="required">Examens complémentaires</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-option"><input type="checkbox" id="radiographie_de_l_paule__f_p" name="examens_comp" value="radiographie_de_l_paule__f_p"> <label for="radiographie_de_l_paule__f_p">Radiographie de l'épaule (F/P)</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="tdm_de_l_paule" name="examens_comp" value="tdm_de_l_paule"> <label for="tdm_de_l_paule">TDM de l'épaule</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="autres_examens" name="examens_comp" value="autres"> <label for="autres_examens">Autres</label></div>
+                </div>
+            </div>
+            
+            <div class="question" id="Pr_ciser_009_container" style="display:none;">
+                <label for="Pr_ciser_009">Préciser</label>
+                <input type="text" id="Pr_ciser_009" name="Pr_ciser_009">
+            </div>
+        </div>
+
+        <!-- Section I: Associated Lesions -->
+        <div class="group" id="group_yp3vm59">
+            <h2>I- LÉSIONS ASSOCIÉES</h2>
+            
+            <div class="question">
+                <label class="required">Lésions</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-option"><input type="checkbox" id="fracture_du_rebord_de_la_gl_ne" name="L_sions" value="fracture_du_rebord_de_la_gl_ne"> <label for="fracture_du_rebord_de_la_gl_ne">Fracture du rebord de la glène</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="encoche_c_phalique" name="L_sions" value="encoche_c_phalique"> <label for="encoche_c_phalique">Encoche céphalique</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="_rupture_de_la_coiffe" name="L_sions" value="_rupture_de_la_coiffe"> <label for="_rupture_de_la_coiffe">Rupture de la coiffe</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="_fracture_du_tubercule_majeur" name="L_sions" value="_fracture_du_tubercule_majeur"> <label for="_fracture_du_tubercule_majeur">Fracture du tubercule majeur</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="fracture_du_col_anatomique" name="L_sions" value="fracture_du_col_anatomique"> <label for="fracture_du_col_anatomique">Fracture du col anatomique</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="_fracture_du_col_chirurgical" name="L_sions" value="_fracture_du_col_chirurgical"> <label for="_fracture_du_col_chirurgical">Fracture du col chirurgical</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="_l_sions_vasculaires" name="L_sions" value="_l_sions_vasculaires"> <label for="_l_sions_vasculaires">Lésions vasculaires</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="l_sions_nerf_circonflexe__anes" name="L_sions" value="l_sions_nerf_circonflexe__anes"> <label for="l_sions_nerf_circonflexe__anes">Lésions nerf circonflexe (anesthésie moignon de l'épaule)</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="l_sions_plexus_brachial" name="L_sions" value="l_sions_plexus_brachial"> <label for="l_sions_plexus_brachial">Lésions plexus brachial</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="autres_l_sions" name="L_sions" value="autres"> <label for="autres_l_sions">Autres lésion associée</label></div>
+                </div>
+            </div>
+            
+            <div class="question" id="Pr_ciser_autres_l_sion_associ__container" style="display:none;">
+                <label for="Pr_ciser_autres_l_sion_associ_" class="required">Préciser autres lésion associée</label>
+                <input type="text" id="Pr_ciser_autres_l_sion_associ_" name="Pr_ciser_autres_l_sion_associ_">
+            </div>
+        </div>
+
+        <!-- Section J: Treatment -->
+        <div class="group" id="group_uu0ta58">
+            <h2>J- TRAITEMENT</h2>
+            
+            <div class="question">
+                <label class="required">Médicamenteux</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-option"><input type="checkbox" id="antalgiques" name="M_dicamenteux" value="antalgiques"> <label for="antalgiques">Antalgiques</label></div>
+                    <div class="checkbox-option"><input type="checkbox" id="anti_inflammatoires" name="M_dicamenteux" value="anti_inflammatoires"> <label for="anti_inflammatoires">Anti-inflammatoires</label></div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label for="Orthop_dique" class="required">Orthopédique</label>
+                <select id="Orthop_dique" name="Orthop_dique" required>
+                    <option value=""></option>
+                    <option value="sous_ag">Sous AG</option>
+                    <option value="sans_ag">Sans AG</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <label for="Technique" class="required">Technique</label>
+                <select id="Technique" name="Technique" required>
+                    <option value=""></option>
+                    <option value="milch">Milch</option>
+                    <option value="kocher">Kocher</option>
+                    <option value="hippocrate">Hippocrate</option>
+                    <option value="mayo_clinic">Mayo Clinic</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <label for="Dur_e_d_immobilisation_semain" class="required">Durée d'immobilisation (semaines)</label>
+                <input type="number" id="Dur_e_d_immobilisation_semain" name="Dur_e_d_immobilisation_semain" required>
+            </div>
+            
+            <div class="question">
+                <label for="Chirurgical">Chirurgical</label>
+                <select id="Chirurgical" name="Chirurgical">
+                    <option value=""></option>
+                    <option value="bankart">Bankart</option>
+                    <option value="_lartajet">Lartajet</option>
+                    <option value="bristow_trillat">Bristow Trillat</option>
+                    <option value="autres">Autres</option>
+                </select>
+            </div>
+            
+            <div class="question" id="Pr_ciser_010_container" style="display:none;">
+                <label for="Pr_ciser_010">Préciser</label>
+                <input type="text" id="Pr_ciser_010" name="Pr_ciser_010">
+            </div>
+            
+            <div class="question">
+                <label for="Kin_sith_rapie" class="required">Kinésithérapie</label>
+                <select id="Kin_sith_rapie" name="Kin_sith_rapie" required>
+                    <option value=""></option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Section K: Results -->
+        <div class="group" id="group_pz1dh96">
+            <h2>K- RÉSULTATS</h2>
+            
+            <div class="question">
+                <label for="Radiographie_de_contr_le_bonn" class="required">Radiographie de contrôle (bonne réduction)</label>
+                <select id="Radiographie_de_contr_le_bonn" name="Radiographie_de_contr_le_bonn" required>
+                    <option value=""></option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <label for="Dernier_recul_mois" class="required">Dernier recul (mois)</label>
+                <input type="number" id="Dernier_recul_mois" name="Dernier_recul_mois" required>
+            </div>
+            
+            <div class="question">
+                <label for="Evolution" class="required">Evolution</label>
+                <select id="Evolution" name="Evolution" required>
+                    <option value=""></option>
+                    <option value="favorable">Favorable</option>
+                    <option value="non_d_favorable">Défavorable</option>
+                </select>
+            </div>
+            
+            <div class="question" id="Pr_ciser_la_complication_container" style="display:none;">
+                <label for="Pr_ciser_la_complication" class="required">Préciser la complication</label>
+                <input type="text" id="Pr_ciser_la_complication" name="Pr_ciser_la_complication">
+            </div>
+            
+            <div class="question">
+                <label for="Reprise_des_activit_s_quotidie" class="required">Reprise des activités quotidiennes</label>
+                <select id="Reprise_des_activit_s_quotidie" name="Reprise_des_activit_s_quotidie" required>
+                    <option value=""></option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+            </div>
+            
+            <div class="question" id="D_lai_de_reprise_Mois_container" style="display:none;">
+                <label for="D_lai_de_reprise_Mois" class="required">Délai de reprise (Mois)</label>
+                <input type="number" id="D_lai_de_reprise_Mois" name="D_lai_de_reprise_Mois">
+            </div>
+            
+            <div class="question">
+                <label for="Reprise_du_sport" class="required">Reprise du sport</label>
+                <select id="Reprise_du_sport" name="Reprise_du_sport" required>
+                    <option value=""></option>
+                    <option value="oui__m_me_niveau">Oui, même niveau</option>
+                    <option value="oui__niveau_inf_rieur">Oui, niveau inférieur</option>
+                    <option value="non">Non</option>
+                </select>
+            </div>
+            
+            <div class="question">
+                <label for="Changement_de_sport_" class="required">Changement de sport ?</label>
+                <select id="Changement_de_sport_" name="Changement_de_sport_" required>
+                    <option value=""></option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Section L: Constant Functional Score -->
+        <div class="group" id="group_wh0hz13">
+            <h2>SCORE FONCTIONNEL DE CONSTANT (Maximum de 100 points)</h2>
+            
+            <div class="question">
+                <label for="douleur" class="required">1- Douleur</label>
+                <div class="hint">1 item seulement, maximum 15 points</div>
+                <select id="douleur" name="douleur" required>
+                    <option value=""></option>
+                    <option value="pas">Pas de douleur</option>
+                    <option value="legere">Douleur légère</option>
+                    <option value="moderee">Douleur modérée</option>
+                </select>
+            </div>
+            
+            <div class="group" id="group_xb4iv52">
+                <h3>2- Activité quotidienne (Maximum 20 points)</h3>
+                
+                <div class="question">
+                    <label class="required">A- Niveau d'activité</label>
+                    <div class="hint">maximum 10 points, cochez chaque item qui se rapporte</div>
+                    <div class="checkbox-group">
+                        <div class="checkbox-option"><input type="checkbox" id="travail" name="actA" value="travail"> <label for="travail">Pas de gêne au travail</label></div>
+                        <div class="checkbox-option"><input type="checkbox" id="loisirs" name="actA" value="loisirs"> <label for="loisirs">Activité de loisirs et de sportifs</label></div>
+                        <div class="checkbox-option"><input type="checkbox" id="sommeil" name="actA" value="sommeil"> <label for="sommeil">Pas de gêne au sommeil</label></div>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <label for="actB" class="required">B- Position de la main</label>
+                    <div class="hint">1 item seulement, maximum de 10 points</div>
+                    <select id="actB" name="actB" required>
+                        <option value=""></option>
+                        <option value="taille">Main à la taille</option>
+                        <option value="xyphoide">Main à la xyphoïde</option>
+                        <option value="cou">Main au cou</option>
+                        <option value="sommet_crane">Main au sommet du crâne</option>
+                        <option value="au_dessus_tete">Main au-dessus de la tête</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="group" id="group_xa8sw22">
+                <h3>3- Evaluation des mobilités (Maximum 40 points)</h3>
+                
+                <div class="question">
+                    <label for="elev_ant" class="required">A- Elévation antérieure</label>
+                    <div class="hint">1 item seulement, maximum 10 points)</div>
+                    <select id="elev_ant" name="elev_ant" required>
+                        <option value=""></option>
+                        <option value="fa">0 à 30°</option>
+                        <option value="fab">31 à 60°</option>
+                        <option value="fac">61° à 90°</option>
+                        <option value="fae">91 à 120°</option>
+                        <option value="fad">121 à 150°</option>
+                        <option value="fafe">151 à 180°</option>
+                    </select>
+                </div>
+                
+                <div class="question">
+                    <label for="elev_lat" class="required">B- Elévation latérale</label>
+                    <div class="hint">1 item seulement, maximum 10 points)</div>
+                    <select id="elev_lat" name="elev_lat" required>
+                        <option value=""></option>
+                        <option value="be">0 à 30°</option>
+                        <option value="bea">31 à 60°</option>
+                        <option value="bac">61° à 90°</option>
+                        <option value="bae">91 à 120°</option>
+                        <option value="bad">121 à 150°</option>
+                        <option value="baf">151 à 180°</option>
+                    </select>
+                </div>
+                
+                <div class="question">
+                    <label class="required">C- Rotation externe</label>
+                    <div class="hint">cochez chaque item qui se rapporte, maximum 10 points</div>
+                    <div class="checkbox-group">
+                        <div class="checkbox-option"><input type="checkbox" id="tete_avant" name="rot_ext" value="tete_avant"> <label for="tete_avant">Main derrière la tête avec le coude en avant</label></div>
+                        <div class="checkbox-option"><input type="checkbox" id="tete_arriere" name="rot_ext" value="tete_arriere"> <label for="tete_arriere">Main derrière la tête avec le coude en arrière</label></div>
+                        <div class="checkbox-option"><input type="checkbox" id="sommet_avant" name="rot_ext" value="sommet_avant"> <label for="sommet_avant">Main au sommet de la tête avec le coude en avant</label></div>
+                        <div class="checkbox-option"><input type="checkbox" id="sommet_arriere" name="rot_ext" value="sommet_arriere"> <label for="sommet_arriere">Main au sommet de la tête avec le coude en arrière</label></div>
+                        <div class="checkbox-option"><input type="checkbox" id="elevation_complete" name="rot_ext" value="elevation_complete"> <label for="elevation_complete">Elévation complète au sommet du crâne</label></div>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <label for="rot_int" class="required">D- Rotation interne</label>
+                    <div class="hint">1 item seulement, maximum 10 points</div>
+                    <select id="rot_int" name="rot_int" required>
+                        <option value=""></option>
+                        <option value="cuisse">Main à la face latérale de la cuisse</option>
+                        <option value="fesse">Main à la fesse</option>
+                        <option value="lombo_sacre">Main à la jonction lombo-sacrée</option>
+                        <option value="taille_L3">Main à la taille (L3)</option>
+                        <option value="T12">Main à la T12</option>
+                        <option value="T7">Main à la région interscapulaire (T7)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="group" id="group_cp6tx52">
+                <h3>4- Evaluation de la force à 90° d'abduction, (Maximum de 25 points, chaque livre correspond à 1 point)</h3>
+                
+                <div class="question">
+                    <label for="atteint90" class="required">Mesure en livres</label>
+                    <div class="hint">Si 90° n'est pas atteint en actif</div>
+                    <select id="atteint90" name="atteint90" required>
+                        <option value=""></option>
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select>
+                </div>
+                
+                <div class="question">
+                    <label for="force_r_lb" class="required">Epaule gauche (livres tenues 5s)</label>
+                    <div class="hint">Si maintien de 5 secondes, par 500g : mettre le nombre du livre tenue cela representera le point obtenu</div>
+                    <input type="number" id="force_r_lb" name="force_r_lb" required>
+                </div>
+                
+                <div class="question">
+                    <label for="force_l_lb" class="required">Epaule droit (livres tenues 5s)</label>
+                    <div class="hint">Si maintien de 5 secondes, par 500g : mettre le nombre du livre tenue cela representera le point obtenu</div>
+                    <input type="number" id="force_l_lb" name="force_l_lb" required>
+                </div>
+            </div>
+            
+            <div class="note">
+                <p><strong>Les notes cumules de chaque partie sont ci-dessous :</strong></p>
+                <p id="Douleur_score_douleur_15">Douleur : <strong id="score_douleur_display">0</strong> /15</p>
+                <p id="Activit_score_activite_20">Activité : <strong id="score_activite_display">0</strong> /20</p>
+                <p id="Mobilit_s_score_mobilites_40">Mobilités : <strong id="score_mobilites_display">0</strong> /40</p>
+                <p id="Force_score_force_25">Force : <strong id="score_force_display">0</strong> /25</p>
+                <p id="_span_style_color_bl_interpretation_span">
+                    <span class="blue-text">Total : <strong id="score_total_display">0</strong> /100</span>
+                    <strong>Interprétation automatique du score obtenu</strong> : <span class="red-text" id="interpretation_display"></span>
+                </p>
+            </div>
+            
+            <div class="question">
+                <label for="score_final" class="required">TOTAL SCORE/100</label>
+                <div class="hint">Saisir le score total obtenu (obligatoire)</div>
+                <input type="number" id="score_final" name="score_final" required>
+                <div id="score_final_error" class="error" style="display:none;">Le score saisi ne correspond pas au total calculé en bleu. Veuillez vérifier</div>
+            </div>
+            
+            <div class="question">
+                <label for="interpretation_finale" class="required">Interprétation finale du score total obtenu</label>
+                <div class="hint">Choisir l'interprétation correspondant au score total (obligatoire)</div>
+                <select id="interpretation_finale" name="interpretation_finale" required>
+                    <option value=""></option>
+                    <option value="mauvais">Mauvais</option>
+                    <option value="mediocre">Médiocre</option>
+                    <option value="bon">Bon</option>
+                    <option value="excellent">Excellent</option>
+                </select>
+                <div id="interpretation_finale_error" class="error" style="display:none;">L'interprétation choisie ne correspond pas au score en rouge. Veuillez corriger.</div>
+            </div>
+        </div>
+
+        <button type="button" id="submitBtn">Soumettre</button>
+    </form>
+
+    <script>
+        // Show/hide relevant fields based on selections
+        document.addEventListener('DOMContentLoaded', function() {
+            // Section A
+            document.getElementById('Profession').addEventListener('change', function() {
+                document.getElementById('Pr_ciser_001_container').style.display = 
+                    this.value === 'autre___pr_ciser' ? 'block' : 'none';
+            });
+            
+            document.getElementById('Situation_matrimoniale').addEventListener('change', function() {
+                document.getElementById('Pr_ciser_002_container').style.display = 
+                    this.value === 'autres' ? 'block' : 'none';
+            });
+            
+            document.getElementById('Pratique_sportive').addEventListener('change', function() {
+                document.getElementById('Si_Oui_pr_cisez_001_container').style.display = 
+                    this.value === 'oui' ? 'block' : 'none';
+            });
+            
+            // Section B
+            document.getElementById('Ant_c_dent_de_luxation_de_l_pa').addEventListener('change', function() {
+                const show = this.value === 'oui';
+                document.getElementById('Si_oui_pr_cisez_container').style.display = show ? 'block' : 'none';
+                document.getElementById('Nombre_de_fois_container').style.display = show ? 'block' : 'none';
+            });
+            
+            document.getElementById('Intervention_chirurgicale_sur_').addEventListener('change', function() {
+                const show = this.value === 'oui';
+                document.getElementById('Si_oui_pr_cisez_Motif_container').style.display = show ? 'block' : 'none';
+                document.getElementById('Nombre_de_fois_2_container').style.display = show ? 'block' : 'none';
+            });
+            
+            document.querySelectorAll('input[name="Ant_c_dents_m_dicaux"]').forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const otherChecked = document.getElementById('autre___pr_ciser_med').checked;
+                    document.getElementById('Pr_ciser_003_container').style.display = otherChecked ? 'block' : 'none';
+                });
+            });
+            
+            // Section C
+            document.getElementById('circontance').addEventListener('change', function() {
+                document.getElementById('AVP_v_container').style.display = this.value === 'avp' ? 'block' : 'none';
+                document.getElementById('Accidents_domestiques_container').style.display = this.value === 'accid_dom' ? 'block' : 'none';
+                document.getElementById('Accident_de_sport_container').style.display = this.value === 'accid_sport' ? 'block' : 'none';
+                document.getElementById('Accident_de_travail_container').style.display = this.value === 'accid_travail' ? 'block' : 'none';
+            });
+            
+            document.getElementById('AVP_v').addEventListener('change', function() {
+                document.getElementById('Pr_ciser_004_container').style.display = this.value === 'autres' ? 'block' : 'none';
+            });
+            
+            document.getElementById('Accidents_domestiques').addEventListener('change', function() {
+                document.getElementById('Pr_ciser_005_container').style.display = this.value === '_autres' ? 'block' : 'none';
+            });
+            
+            document.getElementById('Accident_de_sport').addEventListener('change', function() {
+                document.getElementById('Pr_ciser_006_container').style.display = this.value === 'autres' ? 'block' : 'none';
+            });
+            
+            document.getElementById('Accident_de_travail').addEventListener('change', function() {
+                document.getElementById('Pr_ciser_007_container').style.display = this.value === '_autres' ? 'block' : 'none';
+            });
+            
+            // Section D
+            document.getElementById('Mode_de_transport').addEventListener('change', function() {
+                document.getElementById('Pr_ciser_008_container').style.display = this.value === 'autres' ? 'block' : 'none';
+            });
+            
+            // Section E
+            document.getElementById('Luxation_scapulo_hum_rale').addEventListener('change', function() {
+                document.getElementById('Pr_ciser_container').style.display = this.value === 'oui' ? 'block' : 'none';
+                document.getElementById('Autres_luxations_container').style.display = this.value === 'non' ? 'block' : 'none';
+            });
+            
+            // Section F
+            document.getElementById('Historique').addEventListener('change', function() {
+                const show = this.value === 'r_cidivante';
+                document.getElementById('Nombre_d_pisode_container').style.display = show ? 'block' : 'none';
+                document.getElementById('D_lai_1er_pisode_mois_container').style.display = show ? 'block' : 'none';
+            });
+            
+            // Section G
+            document.querySelectorAll('input[name="Signes_fonctionnels"]').forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const impotenceChecked = document.getElementById('impotence_fonctionnelle').checked;
+                    document.getElementById('Impotence_fonctionnelle_pr_cis_container').style.display = impotenceChecked ? 'block' : 'none';
+                });
+            });
+            
+            // Section H
+            document.querySelectorAll('input[name="examens_comp"]').forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const autresChecked = document.getElementById('autres_examens').checked;
+                    document.getElementById('Pr_ciser_009_container').style.display = autresChecked ? 'block' : 'none';
+                });
+            });
+            
+            // Section I
+            document.querySelectorAll('input[name="L_sions"]').forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const autresChecked = document.getElementById('autres_l_sions').checked;
+                    document.getElementById('Pr_ciser_autres_l_sion_associ__container').style.display = autresChecked ? 'block' : 'none';
+                });
+            });
+            
+            // Section J
+            document.getElementById('Chirurgical').addEventListener('change', function() {
+                document.getElementById('Pr_ciser_010_container').style.display = this.value === 'autres' ? 'block' : 'none';
+            });
+            
+            // Section K
+            document.getElementById('Evolution').addEventListener('change', function() {
+                document.getElementById('Pr_ciser_la_complication_container').style.display = this.value === 'non_d_favorable' ? 'block' : 'none';
+            });
+            
+            document.getElementById('Reprise_des_activit_s_quotidie').addEventListener('change', function() {
+                document.getElementById('D_lai_de_reprise_Mois_container').style.display = this.value === 'oui' ? 'block' : 'none';
+            });
+            
+            // Score calculations
+            function calculateScores() {
+                // 1. Douleur score
+                let scoreDouleur = 0;
+                const douleur = document.getElementById('douleur').value;
+                if (douleur === 'pas') scoreDouleur = 15;
+                else if (douleur === 'legere') scoreDouleur = 10;
+                else if (douleur === 'moderee') scoreDouleur = 5;
+                
+                // 2. Activité score
+                let scoreActA = 0;
+                document.querySelectorAll('input[name="actA"]:checked').forEach(checkbox => {
+                    if (checkbox.value === 'travail') scoreActA += 4;
+                    else if (checkbox.value === 'loisirs') scoreActA += 4;
+                    else if (checkbox.value === 'sommeil') scoreActA += 2;
+                });
+                
+                let scoreActB = 0;
+                const actB = document.getElementById('actB').value;
+                if (actB === 'taille') scoreActB = 2;
+                else if (actB === 'xyphoide') scoreActB = 4;
+                else if (actB === 'cou') scoreActB = 6;
+                else if (actB === 'sommet_crane') scoreActB = 8;
+                else if (actB === 'au_dessus_tete') scoreActB = 10;
+                
+                const scoreActivite = scoreActA + scoreActB;
+                
+                // 3. Mobilités score
+                let scoreEvalA = 0;
+                const elev_ant = document.getElementById('elev_ant').value;
+                if (elev_ant === 'fa') scoreEvalA = 0;
+                else if (elev_ant === 'fab') scoreEvalA = 2;
+                else if (elev_ant === 'fac') scoreEvalA = 4;
+                else if (elev_ant === 'fae') scoreEvalA = 6;
+                else if (elev_ant === 'fad') scoreEvalA = 8;
+                else if (elev_ant === 'fafe') scoreEvalA = 10;
+                
+                let scoreEvalB = 0;
+                const elev_lat = document.getElementById('elev_lat').value;
+                if (elev_lat === 'be') scoreEvalB = 0;
+                else if (elev_lat === 'bea') scoreEvalB = 2;
+                else if (elev_lat === 'bac') scoreEvalB = 4;
+                else if (elev_lat === 'bae') scoreEvalB = 6;
+                else if (elev_lat === 'bad') scoreEvalB = 8;
+                else if (elev_lat === 'baf') scoreEvalB = 10;
+                
+                let scoreRotExt = 0;
+                document.querySelectorAll('input[name="rot_ext"]:checked').forEach(checkbox => {
+                    scoreRotExt += 2;
+                });
+                scoreRotExt = Math.min(10, scoreRotExt);
+                
+                let scoreRotInt = 0;
+                const rot_int = document.getElementById('rot_int').value;
+                if (rot_int === 'cuisse') scoreRotInt = 0;
+                else if (rot_int === 'fesse') scoreRotInt = 2;
+                else if (rot_int === 'lombo_sacre') scoreRotInt = 4;
+                else if (rot_int === 'taille_L3') scoreRotInt = 6;
+                else if (rot_int === 'T12') scoreRotInt = 8;
+                else if (rot_int === 'T7') scoreRotInt = 10;
+                
+                const scoreMobilites = scoreEvalA + scoreEvalB + scoreRotExt + scoreRotInt;
+                
+                // 4. Force score
+                let scoreForce = 0;
+                const atteint90 = document.getElementById('atteint90').value;
+                if (atteint90 === 'oui') {
+                    const forceRLb = parseInt(document.getElementById('force_r_lb').value) || 0;
+                    const forceLLb = parseInt(document.getElementById('force_l_lb').value) || 0;
+                    scoreForce = Math.min(25, forceRLb + forceLLb);
+                }
+                
+                // Total score
+                const scoreTotal = scoreDouleur + scoreActivite + scoreMobilites + scoreForce;
+                
+                // Interpretation
+                let interpretation = '';
+                if (scoreTotal <= 55) interpretation = 'mauvais';
+                else if (scoreTotal <= 70) interpretation = 'mediocre';
+                else if (scoreTotal <= 85) interpretation = 'bon';
+                else interpretation = 'excellent';
+                
+                // Update displays
+                document.getElementById('score_douleur_display').textContent = scoreDouleur;
+                document.getElementById('score_activite_display').textContent = scoreActivite;
+                document.getElementById('score_mobilites_display').textContent = scoreMobilites;
+                document.getElementById('score_force_display').textContent = scoreForce;
+                document.getElementById('score_total_display').textContent = scoreTotal;
+                document.getElementById('interpretation_display').textContent = interpretation;
+                
+                // Validate score_final and interpretation_finale if they exist
+                const scoreFinal = document.getElementById('score_final');
+                if (scoreFinal) {
+                    const scoreFinalValue = parseInt(scoreFinal.value) || 0;
+                    if (scoreFinalValue !== scoreTotal) {
+                        document.getElementById('score_final_error').style.display = 'block';
+                    } else {
+                        document.getElementById('score_final_error').style.display = 'none';
+                    }
+                }
+                
+                const interpretationFinale = document.getElementById('interpretation_finale');
+                if (interpretationFinale) {
+                    if (interpretationFinale.value && interpretationFinale.value !== interpretation) {
+                        document.getElementById('interpretation_finale_error').style.display = 'block';
+                    } else {
+                        document.getElementById('interpretation_finale_error').style.display = 'none';
+                    }
+                }
+                
+                return {
+                    scoreDouleur,
+                    scoreActivite,
+                    scoreMobilites,
+                    scoreForce,
+                    scoreTotal,
+                    interpretation
+                };
+            }
+            
+            // Add event listeners for all score-related fields
+            const scoreFields = [
+                'douleur', 'actA', 'actB', 'elev_ant', 'elev_lat', 'rot_ext', 'rot_int', 
+                'atteint90', 'force_r_lb', 'force_l_lb', 'score_final', 'interpretation_finale'
+            ];
+            
+            scoreFields.forEach(field => {
+                if (field === 'actA' || field === 'rot_ext') {
+                    document.querySelectorAll(`input[name="${field}"]`).forEach(input => {
+                        input.addEventListener('change', calculateScores);
+                    });
+                } else {
+                    const element = document.getElementById(field);
+                    if (element) {
+                        element.addEventListener('change', calculateScores);
+                        if (field === 'force_r_lb' || field === 'force_l_lb') {
+                            element.addEventListener('input', calculateScores);
+                        }
+                    }
+                }
+            });
+            
+            // Submit button functionality
+            document.getElementById('submitBtn').addEventListener('click', function() {
+                // First validate the form
+                let isValid = true;
+                document.querySelectorAll('[required]').forEach(field => {
+                    if (!field.value) {
+                        isValid = false;
+                        field.style.borderColor = 'red';
+                    } else {
+                        field.style.borderColor = '';
+                    }
+                });
+                
+                // Validate score_final matches calculated total
+                const scores = calculateScores();
+                const scoreFinal = parseInt(document.getElementById('score_final').value) || 0;
+                if (scoreFinal !== scores.scoreTotal) {
+                    isValid = false;
+                    document.getElementById('score_final_error').style.display = 'block';
+                }
+                
+                // Validate interpretation_finale matches calculated interpretation
+                const interpretationFinale = document.getElementById('interpretation_finale').value;
+                if (interpretationFinale !== scores.interpretation) {
+                    isValid = false;
+                    document.getElementById('interpretation_finale_error').style.display = 'block';
+                }
+                
+                if (isValid) {
+                    // Collect all form data
+                    const formData = {};
+                    const formElements = document.getElementById('shoulderSurvey').elements;
+                    for (let i = 0; i < formElements.length; i++) {
+                        const element = formElements[i];
+                        if (element.name) {
+                            if (element.type === 'checkbox') {
+                                if (!formData[element.name]) {
+                                    formData[element.name] = [];
+                                }
+                                if (element.checked) {
+                                    formData[element.name].push(element.value);
+                                }
+                            } else if (element.type === 'radio') {
+                                if (element.checked) {
+                                    formData[element.name] = element.value;
+                                }
+                            } else {
+                                formData[element.name] = element.value;
+                            }
+                        }
+                    }
+                    
+                    // Here you would typically send the data to your server or Google Apps Script
+                    console.log('Form data to submit:', formData);
+                    alert('Formulaire validé avec succès! Les données peuvent maintenant être envoyées.');
+                    
+                    // Example of how you might send to Google Apps Script
+                    // submitToGoogleSheets(formData);
+                } else {
+                    alert('Veuillez remplir tous les champs obligatoires et corriger les erreurs avant de soumettre.');
+                }
+            });
+            
+            // Function to submit data to Google Sheets via Apps Script
+            function submitToGoogleSheets(formData) {
+                // Replace with your Apps Script Web App URL
+                const scriptUrl = 'https://script.google.com/macros/s/AKfycbx-SuF0yP3wfB6ZDk7QScZPQ-OR10PyP0O6F97xZ9RV6_SlZ_4Qhz-vc8M2tgIJDJ8Yqw/exec';
+                
+                fetch(scriptUrl, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(() => {
+                    alert('Données enregistrées avec succès!');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Une erreur est survenue lors de l\'envoi des données.');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

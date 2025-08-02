@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Mon Portfolio</title>
+  <title>Portfolio de Romain</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,38 +13,48 @@
       <a href="#projets">Projets</a>
       <a href="#competences">Compétences</a>
       <a href="#contact">Contact</a>
+      <a href="#formulaire">Formulaire</a>
     </nav>
   </header>
 
   <section id="presentation">
     <h2>À propos de moi</h2>
-    <p>Je suis un jeune passionné de numérique et de développement web.</p>
-  <p>Je suis un éducateur spécialisé dans la gestion des problèmes techniques et leur résolution.<p>
+    <p>Je suis Romain AKPO, passionné par le développement web, la transformation numérique et l'entrepreneuriat au Bénin.</p>
+    <a class="btn" href="cv_romain.pdf" download>Télécharger mon CV</a>
   </section>
 
   <section id="projets">
     <h2>Mes Projets</h2>
     <ul>
-      <li>Site e-commerce de jus de fruits;</li>
-      <li>Plateforme de gestionnaire des données;</li>
-      <li>Plateforme de formation en ligne.</li>
+      <li>Site de formation en ligne BCC-Center</li>
+      <li>Plateforme de gestion de production de jus de fruits</li>
     </ul>
   </section>
 
   <section id="competences">
     <h2>Compétences</h2>
-    <p>HTML, CSS, JavaScript, WordPress, Canva</p>
+    <p>HTML, CSS, JavaScript, WordPress, Google Apps Script, Survey solution, Kobotoolboox, Excel Avancé, Canva et autres logiciels</p>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <button onclick="afficherContact()">Voir mon email</button>
-    <p id="email" style="display:none;">nounonvenanromain@gmail.com</p>
+    <form id="contact-form">
+      <input type="text" placeholder="Votre nom" required>
+      <input type="text" placeholder="Votre prénoms" required>
+      <input type="email" placeholder="Votre email" required>
+      <textarea placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <section id="formulaire">
+    <h2>Formulaire DSSR (KoboToolbox)</h2>
+    <iframe src="kobo_formule.html" width="100%" height="600px" frameborder="0"></iframe>
   </section>
 
   <footer>
-    <p>&copy; 2025 Romain AKPO</p>
-  <p>Je puis tout par celui qui me fortifie!</p>
+    <p>&copy; 2025 Lifero Jésuwè</p>
+      <p> Je puis tout par celui me fortifie !</p>
   </footer>
 
   <script src="script.js"></script>

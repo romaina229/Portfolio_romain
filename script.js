@@ -1,8 +1,4 @@
-function afficherContact() {
-  var email = document.getElementById("email");
-  if (email.style.display === "none") {
-    email.style.display = "block";
-  } else {
-    email.style.display = "none";
-  }
-}
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Message envoyé (simulation). Merci de votre contact !");
+});
