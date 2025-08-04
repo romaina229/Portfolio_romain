@@ -2,18 +2,25 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Portfolio de Lifero</title>
+  <title>Portfolio de Romain</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
   <header>
-    <h1>Bienvenue sur mon Portfolio</h1>
+       <img src="logoro.jpeg" alt="logo de Lifero" style="height: 70px;">  
+       <h1>Bienvenue sur ma page de présentation de mes offres de service numérique</h1> 
     <nav>
-      <a href="#projets">Projets</a>
-      <a href="#competences">Compétences</a>
-      <a href="#contact">Contact</a>
-      <a href="#formulaire">Formulaire</a>
+      <a href="#" onclick="showSection('presentation')">Présentation</a>
+      <a href="#" onclick="showSection('competences')">Compétences</a>
+      <a href="#" onclick="showSection('projets')">Projets</a>
+      <a href="#" onclick="showSection('contact')">Contact</a>
+      <a href="#" onclick="showSection('formulaire')">Formulaire</a>
     </nav>
   </header>
 
@@ -23,7 +30,7 @@
     <a class="btn" href="cv_romain.pdf" download>Télécharger mon CV</a>
   </section>
 
-  <section id="projets">
+  <section id="projets" class="hidden">
     <h2>Mes Projets</h2>
     <ul>
       <li>Site de formation en ligne BCC-Center</li>
@@ -36,25 +43,40 @@
     <p>HTML, CSS, JavaScript, WordPress, Google Apps Script, Survey solution, Kobotoolboox, Excel Avancé, Canva et autres logiciels</p>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="hidden">
     <h2>Contact</h2>
     <form id="contact-form">
       <input type="text" placeholder="Votre nom" required>
       <input type="text" placeholder="Votre prénoms" required>
       <input type="email" placeholder="Votre email" required>
-      <textarea placeholder="Votre message" required></textarea>
+	 
+	 <label for="niveau">Niveau d'instruction</label>
+     <select id="niveau" name="niveau" required>				
+	    <option value="">sélectionnéz votre niveau d'instruction</option>
+	    <option value="doctorat">Doctorat</option> 
+	    <option value="master">Master</option> 
+	    <option value="licence"> Licence</option>
+	    <option value="bac" >Baccalauréat</option>
+	    <option value="secondaire" >Secondaire</option>
+	    <option value="primaire" >Primaire</option> 
+	    <option value="autre" >Autre</option> 
+	 </select>
+	  
+	  <textarea placeholder="Votre message" required></textarea>
       <button type="submit">Envoyer</button>
     </form>
   </section>
 
-  <section id="formulaire">
-    <h2>Formulaire DSSR (KoboToolbox)</h2>
+  <section id="formulaire" class="hidden">
+    <h2>Formulaire</h2>
     <iframe src="kobo_formule.html" width="100%" height="600px" frameborder="0"></iframe>
   </section>
 
   <footer>
     <p>&copy; 2025 Lifero Jésuwè</p>
-      <p> Je puis tout par celui qui me fortifie !</p>
+    <p> Je puis tout par celui me fortifie !</p> 
+	<img src="image-ro.png" alt="logo de Lifero" style="height: 40px;">
+	
   </footer>
 
   <script src="script.js"></script>
